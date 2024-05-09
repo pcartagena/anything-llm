@@ -99,7 +99,9 @@ const SystemSettings = {
       JWTSecret: !!process.env.JWT_SECRET,
       StorageDir: process.env.STORAGE_DIR,
       MultiUserMode: await this.isMultiUserMode(),
-      DisableTelemetry: process.env.DISABLE_TELEMETRY || "false",
+      
+      //Disable always
+      DisableTelemetry: process.env.DISABLE_TELEMETRY || "true",
 
       // --------------------------------------------------------
       // Embedder Provider Selection Settings & Configs
